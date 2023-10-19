@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1>Show Books</h1>
-    <p>title: {{ user.title }}</p>
-    <p>author {{ user.author }}</p>
-    <p>total_page: {{ user.total_page }}</p>
-    <p>publisher: {{ user.publisher }}</p>
-    <p>category: {{ user.category }}</p>
-    <p>price: {{ user.category }}</p>
+    <p>title: {{ book.title }}</p>
+    <p>author {{ book.author }}</p>
+    <p>total_page: {{ book.total_page }}</p>
+    <p>publisher: {{ book.publisher }}</p>
+    <p>category: {{ book.category }}</p>
+    <p>price: {{ book.category }}</p>
 
 
   </div>

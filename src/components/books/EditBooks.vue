@@ -2,24 +2,24 @@
   <div>
     <h1>Edit book</h1>
     <h1>Edit book</h1>
-    <form v-on:submit.prevent="editUser">
-      <p>title: <input type="text" v-model="user.title" /></p>
-      <p>author: <input type="text" v-model="user.author" /></p>
-      <p>total_page: <input type="text" v-model="user.total_page" /></p>
-      <p>publisher: <input type="text" v-model="user.publisher" /></p>
-      <p>category: <input type="text" v-model="user.category" /></p>
-      <p>price: <input type="text" v-model="user.price" /></p>
+    <form v-on:submit.prevent="editBook">
+      <p>title: <input type="text" v-model="book.title" /></p>
+      <p>author: <input type="text" v-model="book.author" /></p>
+      <p>total_page: <input type="text" v-model="book.total_page" /></p>
+      <p>publisher: <input type="text" v-model="book.publisher" /></p>
+      <p>category: <input type="text" v-model="book.category" /></p>
+      <p>price: <input type="text" v-model="book.price" /></p>
 
       <p><button type="submit">edit book</button></p>
     </form>
     <hr />
     <div>
-      <p>title: {{ user.title }}</p>
-    <p>author {{ user.author }}</p>
-    <p>total_page: {{ user.total_page }}</p>
-    <p>publisher: {{ user.publisher }}</p>
-    <p>category: {{ user.category }}</p>
-    <p>price: {{ user.category }}</p>
+      <p>title: {{ book.title }}</p>
+    <p>author {{ book.author }}</p>
+    <p>total_page: {{ book.total_page }}</p>
+    <p>publisher: {{ book.publisher }}</p>
+    <p>category: {{ book.category }}</p>
+    <p>price: {{ book.category }}</p>
       <p></p>
     </div>
   </div>

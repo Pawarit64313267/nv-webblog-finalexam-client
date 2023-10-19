@@ -16,7 +16,7 @@
           ดูข้อมูลผู้ใช้
         </button>
         <button v-on:click="navigateTo('/user/edit/' + user.id)">
-          แกไขข้อมูล
+          แก้ไขข้อมูล
         </button>
         <button v-on:click="deleteUser(user)">ลบข้อมูล</button>
       </p>
