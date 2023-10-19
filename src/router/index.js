@@ -1,33 +1,33 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CarIndex from '@/components/Cars/Index'
-import CarEdit from '@/components/Cars/EditCar'
-import CarShow from '@/components/Cars/ShowCar'
-import CarCreate from '@/components/Cars/CreateCar'
+import BookIndex from '@/components/Books/Index'
+import BookEdit from '@/components/Books/EditBook'
+import BookShow from '@/components/Books/ShowBook'
+import BookCreate from '@/components/Books/CreateBook'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/car/create',
-      name: 'car-create',
-      component: CarCreate
+      path: '/book/create',
+      name: 'book-create',
+      component: BookCreate
     },
     {
-      path: '/car/edit/:carId',
-      name: 'car-edit',
-      component: CarEdit
+      path: '/book/edit/:bookId',
+      name: 'book-edit',
+      component: BookEdit
     },
     {
-      path: '/car/:carId',
-      name: 'car',
-      component: CarShow
+      path: '/book/:bookId',
+      name: 'book',
+      component: BookShow
     },
     {
-      path: '/cars',
-      name: 'cars',
-      component: CarIndex
+      path: '/books',
+      name: 'books',
+      component: BookIndex
     },
 
     
