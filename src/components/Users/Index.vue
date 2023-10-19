@@ -1,20 +1,24 @@
 <template>
   <div>
-    <h1>Get All Users</h1>
-    <div>จํานวนผู้ใช้งาน {{ users.length }}</div>
-    <div v-for="user in users" v-bind:key="user.id">
-      <div>id: {{ user.id }}</div>
-      <div>ชืEอ-นามสกุล: {{ user.name }} - {{ user.lastname }}</div>
-      <div>email: {{ user.email }}</div>
-      <div>password: {{ user.password }}</div>
+    <h1>Get All cars</h1>
+    <div>Car Amount {{ cars.length }}</div>
+    <div v-for="car in cars" v-bind:key="car.id">
+      <div></div>
+      <div>id: {{ car.id }}</div>
+      <div>category: {{ car.category }}</div>
+      <div>engine_capacity: {{ car.engine_capacity }}</div>
+      <div>brand: {{ car.brand }}</div>
+      <div>color: {{ car.color }}</div>
+      <div>lc_plate: {{ car.lc_plate }}</div>
+      <div>chasis_no: {{ car.chasis_no }}</div>
       <p>
-        <button v-on:click="navigateTo('/user/' + user.id)">
-          ดูข้อมูลผู้ใช้
+        <button v-on:click="navigateTo('/car/' + car.id)">
+          ดูข้อมูลรถ
         </button>
-        <button v-on:click="navigateTo('/user/edit/' + user.id)">
-          แกไขข้อมูล
+        <button v-on:click="navigateTo('/car/edit/' + car.id)">
+          แก้ไขข้อมูล
         </button>
-        <button v-on:click="deleteUser(user)">ลบข้อมูล</button>
+        <button v-on:click="deleteUser(car)">ลบข้อมูล</button>
       </p>
       <hr />
     </div>
@@ -25,18 +29,18 @@ import UserServices from "@/services/UserService";
 export default {
   data() {
     return {
-      users: []
+      cars: []
     };
   },
   methods: {
     navigateTo(route) {
       this.$router.push(route);
     },
-    async deleteUser(user) {
+    async deleteUser(car) {
       let result = confirm("Want to delete?");
       if (result) {
         try {
-          await UserServices.delete(user);
+          await UserServices.delete(car);
           this.refreshData()
         } catch (err) {
           console.log(err);
@@ -44,11 +48,11 @@ export default {
       }
     },
     async refreshData() {
-      this.users = (await UserServices.index()).data;
+      this.cars = (await UserServices.index()).data;
     }
   },
   async created() {
-    this.users = (await UserServices.index()).data;
+    this.cars = (await UserServices.index()).data;
   }
 };
 </script>
